@@ -17,12 +17,17 @@
   --nav-font: "Poppins",  sans-serif;
 }
 
+:root {
+  --blue-tamani: #121a5f; /* Bleu Tamani */
+  --yellow-tamani: #f6bb47; /* Jaune Tamani */
+}
+
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2f4d5a; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #67b0d1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #121a5f; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #121a5f; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,7 +35,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #67b0d1; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #121a5f; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -67,10 +72,14 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Barlow:wght@700&display=swap');
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: 'Barlow', sans-serif; /* Police par défaut pour le texte */
+  scrollbar-width: none; /* Pour Firefox */
 }
 
 a {
@@ -150,14 +159,14 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
+  --background-color: var(--blue-tamani); /* Applique le bleu Tamani comme fond */
+  --default-color: #ffffff; /* Garde la couleur blanche pour le texte par défaut */
+  --heading-color: var(--yellow-tamani); /
 }
 
 .header .logo {
@@ -184,7 +193,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #4b99bb;
+  --background-color: var(--blue-tamani); /* Applique le bleu Tamani comme fond */
 }
 
 /*--------------------------------------------------------------
@@ -431,6 +440,9 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   position: relative;
+  --background-color: var(--blue-tamani); /* Applique le bleu Tamani comme fond */
+  --default-color: #ffffff; /* Garde la couleur blanche pour le texte par défaut */
+  --heading-color: var(--yellow-tamani); /
 }
 
 .footer .footer-top {
